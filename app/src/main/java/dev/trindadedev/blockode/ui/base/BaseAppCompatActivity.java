@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
+import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -12,6 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.appbar.MaterialToolbar;
 import dev.trindadedev.blockode.os.PermissionManager;
+import dev.trindadedev.blockode.os.PermissionStatus;
+import dev.trindadedev.blockode.os.PermissionType;
 import dev.trindadedev.blockode.ui.components.dialog.ProgressDialog;
 import dev.trindadedev.blockode.utils.EdgeToEdge;
 import dev.trindadedev.blockode.utils.PrintUtil;
@@ -20,9 +23,11 @@ import java.io.Serializable;
 @SuppressWarnings("DEPRECATION")
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
+  public static final int TOAST_LENGHT = 4000;
+
   @NonNull private View rootView;
   @NonNull private ProgressDialog progressDialog;
-  protected PermissionManager.Storage storagePermissionManager;
+  @NonNull protected PermissionManager.Storage storagePermissionManager;
 
   private final ActivityResultLauncher<Intent> allFilesPermissionLauncher =
       registerForActivityResult(
@@ -57,7 +62,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
   protected abstract void onBindLayout(@Nullable final Bundle savedInstanceState);
 
   protected void onPostBind(@Nullable final Bundle savedInstanceState) {
-    if (!storagePermissionManager.check()) storagePermissionManager.request();
+    if (storagePermissionManager.check() == PermissionStatus.DENIED) storagePermissionManager.request();
     EdgeToEdge.enable(this);
   }
 
@@ -83,7 +88,13 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
   }
 
-  protected void onReceive(final PermissionType type, final boolean status) {}
+  /**
+   * Called when user grant or deny an permission.
+   *
+   * @param type The Type of Permission. see enum PermissionType.
+   * @param status The status of permission. see enum PermissionStatus.
+   */
+  protected void onReceive(final PermissionType type, final PermissionStatus status) {}
 
   public View getRootView() {
     return rootView;
@@ -94,7 +105,9 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     toolbar.setNavigationOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
   }
 
-  protected void onReceive() {}
+  protected final void toast(final String message) {
+    Toast.makeText(this, message, TOAST_LENGHT).show();
+  }
 
   @Nullable
   protected <T extends Serializable> T getSerializable(final String key, final Class<T> clazz) {
@@ -132,9 +145,5 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     } else {
       return clazz.cast(bundle.getParcelable(key));
     }
-  }
-
-  public enum PermissionType {
-    STORAGE;
   }
 }
