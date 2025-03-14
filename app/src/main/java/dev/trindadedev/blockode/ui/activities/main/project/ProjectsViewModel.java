@@ -1,4 +1,4 @@
-package dev.trindadedev.blockode.ui.activities.project;
+package dev.trindadedev.blockode.ui.activities.main.project;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
