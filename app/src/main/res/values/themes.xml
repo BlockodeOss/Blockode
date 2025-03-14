@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-  <style name="Base.Theme.Blockode" parent="@style/Theme.Material3.Light.NoActionBar">
+<resources>
+  <style name="Base.Theme.Blockode" parent="Theme.MaterialComponents.Light.NoActionBar" />
 
+  <style name="Theme.Blockode" parent="Base.Theme.Blockode">
+    <item name="android:navigationBarColor">@android:color/transparent</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:fontFamily">@font/neubrutalism_font_1_regular</item>
+
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="fontFamily">@font/neubrutalism_font_1_regular</item>
+    <item name="textInputStyle">@style/Widget.Blockode.TextInputLayout</item>
+    <item name="materialCardViewFilledStyle">@style/Widget.Blockode.MaterialCardView.Filled</item>
+
+    <!-- Colors -->
     <item name="colorPrimary">@color/neo_primary</item>
     <item name="colorSecondary">@color/neo_secondary</item>
     <item name="colorTertiary">@color/neo_tertiary</item>
@@ -10,16 +22,5 @@
     <item name="colorSurfaceContainerLowest">@color/neo_background</item>
     <item name="colorSurfaceContainerLow">@color/neo_background</item>
     <item name="colorOnPrimary">@color/neo_scrim</item>
-
-  </style>
-  <style name="Theme.Blockode" parent="Base.Theme.Blockode">
-    <item name="windowActionBar">false</item>
-    <item name="windowNoTitle">true</item>
-    <item name="android:navigationBarColor">@android:color/transparent</item>
-    <item name="android:statusBarColor">@android:color/transparent</item>
-    <item name="fontFamily">@font/neubrutalism_font_1_regular</item>
-    <item name="android:fontFamily">@font/neubrutalism_font_1_regular</item>
-    <item name="textInputStyle">@style/Widget.Blockode.TextInputLayout</item>
-    <item name="materialCardViewFilledStyle">@style/Widget.Blockode.MaterialCardView.Filled</item>
   </style>
 </resources>

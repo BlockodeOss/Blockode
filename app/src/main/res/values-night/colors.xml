@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <!--
   <color name="neo_primary">#FFFFFF</color>
   <color name="neo_onPrimary">#131313</color>
   <color name="neo_secondary">#C6C6C6</color>
@@ -8,5 +7,4 @@
   <color name="neo_background">#131313</color>
   <color name="neo_surface">#131313</color>
   <color name="neo_scrim">#000000</color>
-  -->
 </resources>
