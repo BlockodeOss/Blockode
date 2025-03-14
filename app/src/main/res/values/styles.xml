@@ -1,13 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <style
-    name="Widget.Blockode.Toolbar.SmallText"
-    parent="Widget.Material3.Toolbar">
+  <style name="Widget.Blockode.Toolbar.SmallText" parent="Widget.Material3.Toolbar">
     <item name="titleTextAppearance">?attr/textAppearanceBodyLarge</item>
     <item name="subtitleTextAppearance">?attr/textAppearanceBodyMedium</item>
   </style>
-  <style
-    name="Widget.Blockode.TextInputLayout"
-    parent="Widget.Material3.TextInputLayout.OutlinedBox">
+  <style name="Widget.Blockode.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
     <item name="hintEnabled">true</item>
     <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Blockode.TextInputLayout</item>
     <item name="android:bottomLeftRadius">14dp</item>
@@ -16,16 +13,12 @@
     <item name="android:topRightRadius">14dp</item>
   </style>
 
-  <style
-    name="ShapeAppearanceOverlay.Blockode.TextInputLayout"
-    parent="">
+  <style name="ShapeAppearanceOverlay.Blockode.TextInputLayout" parent="">
     <item name="cornerFamily">rounded</item>
     <item name="cornerSize">14dp</item>
   </style>
 
-  <style
-    name="Widget.Blockode.MaterialCardView.Filled"
-    parent="Widget.Material3.CardView.Filled">
-    <item name="cardCornerRadius">16dp</item>
+  <style name="Widget.Blockode.MaterialCardView.Filled" parent="Widget.Material3.CardView.Filled">
+    <item name="cardCornerRadius">@dimen/card_radius</item>
   </style>
 </resources>

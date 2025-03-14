@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-  <style
-    name="Base.Theme.Blockode"
-    parent="@style/Theme.Material3.Light.NoActionBar">
+  <style name="Base.Theme.Blockode" parent="@style/Theme.Material3.Light.NoActionBar">
 
     <item name="colorPrimary">@color/neo_primary</item>
     <item name="colorSecondary">@color/neo_secondary</item>
@@ -13,9 +12,7 @@
     <item name="colorOnPrimary">@color/neo_scrim</item>
 
   </style>
-  <style
-    name="Theme.Blockode"
-    parent="Base.Theme.Blockode">
+  <style name="Theme.Blockode" parent="Base.Theme.Blockode">
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
     <item name="android:navigationBarColor">@android:color/transparent</item>
