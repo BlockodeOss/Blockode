@@ -4,13 +4,15 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import dev.trindadedev.neobrutalism.R;
 import dev.trindadedev.neobrutalism.base.BaseNeoRelativeLayout;
+import dev.trindadedev.neobrutalism.base.IText;
 import dev.trindadedev.neobrutalism.databinding.NeoButtonBinding;
 
-public class NeoButton extends BaseNeoRelativeLayout {
+public class NeoButton extends BaseNeoRelativeLayout implements IText {
 
   private NeoButtonBinding binding;
 
@@ -43,6 +45,15 @@ public class NeoButton extends BaseNeoRelativeLayout {
 
   public CharSequence getText() {
     return binding.buttonText.getText();
+  }
+
+  /**
+   * Returns the textview of the button.
+   */
+  @Override
+  @NonNull
+  public TextView asTextView() {
+    return binding.buttonText;
   }
 
   @Override

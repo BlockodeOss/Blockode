@@ -106,11 +106,11 @@
       android:text="@string/common_word_cancel" />
 
     <dev.trindadedev.neobrutalism.button.NeoButton
-      android:id="@+id/save"
+      android:id="@+id/next"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_weight="1"
-      android:text="@string/common_word_save" />
+      android:text="@string/common_word_create" />
 
   </LinearLayout>
 </LinearLayout>

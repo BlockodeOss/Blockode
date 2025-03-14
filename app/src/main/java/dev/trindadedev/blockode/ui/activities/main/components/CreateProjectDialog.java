@@ -20,37 +20,32 @@ public class CreateProjectDialog extends BottomSheetDialog {
     super(context);
     binding = DialogCreateProjectBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
+
+    binding.next.asTextView().setPadding(0, 0, 0, 0);
+    binding.cancel.asTextView().setPadding(0, 0, 0, 0);
+
+    binding.next.setOnClickListener(v -> onNext());
+    binding.cancel.setOnClickListener(v -> dismiss());
   }
 
-  @Override
-  public void show() {
-    super.show();
-    binding.save.setOnClickListener(
-        v -> {
-          var project = new ProjectBean();
-          var basicInfo = new ProjectBasicInfoBean();
-          basicInfo.name = Objects.requireNonNull(binding.projectName.getText()).toString();
-          basicInfo.packageName =
-              Objects.requireNonNull(binding.projectPackage.getText()).toString();
-          basicInfo.mainClassPackage =
-              basicInfo.packageName + "." + Objects.requireNonNull(binding.projectClass.getText());
-          project.scId = String.valueOf(UUID.randomUUID()); // random scid for now
-          project.basicInfo = basicInfo;
-          project.variables = new ArrayList<>();
-          project.blocks = new ArrayList<>();
+  private void onNext() {
+    var project = new ProjectBean();
+    var basicInfo = new ProjectBasicInfoBean();
+    basicInfo.name = Objects.requireNonNull(binding.projectName.getText()).toString();
+    basicInfo.packageName =
+      Objects.requireNonNull(binding.projectPackage.getText()).toString();
+    basicInfo.mainClassPackage =
+      basicInfo.packageName + "." + Objects.requireNonNull(binding.projectClass.getText());
+    project.scId = String.valueOf(UUID.randomUUID()); // random scid for now
+    project.basicInfo = basicInfo;
+    project.variables = new ArrayList<>();
+    project.blocks = new ArrayList<>();
 
-          if (!((binding.projectName.getText()).toString().isEmpty()
-              || (binding.projectPackage.getText()).toString().isEmpty())) {
-            ProjectManager.createProjectByBean(project);
-            dismiss();
-          } else {
-            Toast.makeText(getContext(), R.string.fill_all_fields, Toast.LENGTH_SHORT).show();
-          }
-        });
-
-    binding.cancel.setOnClickListener(
-        v -> {
-          dismiss();
-        });
+    if (!((binding.projectName.getText()).toString().isEmpty() || (binding.projectPackage.getText()).toString().isEmpty())) {
+      ProjectManager.createProjectByBean(project);
+      dismiss();
+    } else {
+      Toast.makeText(getContext(), R.string.fill_all_fields, Toast.LENGTH_SHORT).show();
+    }
   }
 }

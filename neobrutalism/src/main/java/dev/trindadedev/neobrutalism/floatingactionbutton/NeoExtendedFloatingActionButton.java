@@ -5,14 +5,16 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import dev.trindadedev.neobrutalism.R;
 import dev.trindadedev.neobrutalism.base.BaseNeoRelativeLayout;
+import dev.trindadedev.neobrutalism.base.IText;
 import dev.trindadedev.neobrutalism.databinding.NeoExtendedFloatingActionButtonBinding;
 
-public class NeoExtendedFloatingActionButton extends BaseNeoRelativeLayout {
+public class NeoExtendedFloatingActionButton extends BaseNeoRelativeLayout implements IText {
 
   private NeoExtendedFloatingActionButtonBinding binding;
 
@@ -66,11 +68,19 @@ public class NeoExtendedFloatingActionButton extends BaseNeoRelativeLayout {
   }
 
   @Override
+  @NonNull
+  public TextView asTextView() {
+    return binding.fabText;
+  }
+
+  @Override
+  @NonNull
   public String getNeoName() {
     return "NeoExtendedFloatingActionButton";
   }
 
   @Override
+  @NonNull
   public View getNeoRoot() {
     return binding.fabRoot;
   }
