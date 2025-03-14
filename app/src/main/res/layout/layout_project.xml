@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
   android:paddingTop="8dp"
@@ -7,21 +10,20 @@
   android:paddingStart="20dp"
   android:paddingEnd="20dp">
 
-  <dev.trindadedev.neobrutalism.NeoView xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+  <dev.trindadedev.neobrutalism.NeoView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="5dp"
     android:gravity="start"
     android:orientation="vertical"
     android:id="@+id/neo_view"
-    app:backgroundMarginStart="3dp"
-    app:backgroundMarginTop="3dp"
-    app:backgroundRadius="15dp"
+    app:backgroundMarginStart="@dimen/neo_extended_fab_background_margin_start"
+    app:backgroundMarginTop="@dimen/neo_extended_fab_background_margin_top"
+    app:backgroundRadius="@dimen/neo_background_radius"
+    app:foregroundStrokeWidth="@dimen/neo_stroke_width"
     app:backgroundShadowColor="@color/mtrl_scrim_color"
     app:foregroundColor="?android:colorBackground"
-    app:foregroundStrokeColor="@color/mtrl_scrim_color"
-    app:foregroundStrokeWidth="@dimen/neo_stroke_width">
+    app:foregroundStrokeColor="@color/mtrl_scrim_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"

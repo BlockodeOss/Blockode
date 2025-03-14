@@ -146,14 +146,4 @@
     </LinearLayout>
 
   </androidx.core.widget.NestedScrollView>
-
-  <dev.trindadedev.neobrutalism.floatingactionbutton.NeoExtendedFloatingActionButton
-    android:id="@+id/create_new"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="end|bottom"
-    android:layout_margin="10dp"
-    app:fabIcon="@drawable/ic_mtrl_add"
-    app:fabText="@string/common_word_create_new" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

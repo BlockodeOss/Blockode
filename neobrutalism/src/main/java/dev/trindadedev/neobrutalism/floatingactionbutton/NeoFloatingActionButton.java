@@ -38,7 +38,7 @@ public class NeoFloatingActionButton extends BaseNeoRelativeLayout {
 
     final var attributes =
         context.obtainStyledAttributes(attrs, R.styleable.NeoFloatingActionButton, 0, 0);
-    final var icon = attributes.getDrawable(R.styleable.NeoFloatingActionButton_fabIcon);
+    final var icon = attributes.getDrawable(R.styleable.NeoFloatingActionButton_android_src);
     setIcon(icon);
   }
 

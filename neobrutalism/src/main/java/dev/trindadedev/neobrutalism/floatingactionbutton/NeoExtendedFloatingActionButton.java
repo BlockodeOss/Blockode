@@ -41,9 +41,9 @@ public class NeoExtendedFloatingActionButton extends BaseNeoRelativeLayout {
         context.obtainStyledAttributes(attrs, R.styleable.NeoFloatingActionButton, 0, 0);
     final var attributesExtended =
         context.obtainStyledAttributes(attrs, R.styleable.NeoExtendedFloatingActionButton, 0, 0);
-    final var icon = attributes.getDrawable(R.styleable.NeoFloatingActionButton_fabIcon);
+    final var icon = attributes.getDrawable(R.styleable.NeoFloatingActionButton_android_src);
     final var text =
-        attributesExtended.getString(R.styleable.NeoExtendedFloatingActionButton_fabText);
+        attributesExtended.getString(R.styleable.NeoExtendedFloatingActionButton_android_text);
     setIcon(icon);
     setText(text);
   }

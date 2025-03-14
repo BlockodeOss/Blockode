@@ -2,12 +2,12 @@
 <resources>
   <declare-styleable name="NeoFloatingActionButton">
     <attr
-      name="fabIcon"
+      name="android:src"
       format="reference" />
   </declare-styleable>
   <declare-styleable name="NeoExtendedFloatingActionButton">
     <attr
-      name="fabText"
+      name="android:text"
       format="string" />
   </declare-styleable>
 </resources>

@@ -3,26 +3,27 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_height="wrap_content"
   android:layout_width="wrap_content"
-  app:backgroundMarginStart="@dimen/neo_button_background_margin_start"
-  app:backgroundShadowColor="#000"
-  app:backgroundRadius="@dimen/neo_background_radius"
-  app:foregroundStrokeWidth="@dimen/neo_stroke_width"
   android:gravity="center"
-  app:foregroundColor="?colorPrimary"
+  android:id="@+id/button_root"
+  app:backgroundMarginStart="@dimen/neo_button_background_margin_start"
   app:backgroundMarginTop="@dimen/neo_button_background_margin_top"
+  app:backgroundRadius="@dimen/neo_background_radius"
+  app:backgroundShadowColor="@color/neo_background_shadow_color"
+  app:foregroundColor="?colorPrimary"
   app:foregroundStrokeColor="?colorOutline"
-  android:id="@+id/button_root">
+  app:foregroundStrokeWidth="@dimen/neo_stroke_width">
 
   <TextView
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
     android:layout_marginEnd="@dimen/neo_button_text_margin_end"
     android:gravity="center"
-    android:textAlignment="center"
     android:padding="@dimen/neo_button_text_padding"
     android:fontFamily="@font/neubrutalism_font_1_regular"
-    android:textSize="@dimen/neo_button_text_size"
     android:id="@+id/button_text"
-    android:text="Text" />
+    android:text="NeoButton"
+    android:textAlignment="center"
+    android:textColor="?colorOnPrimary"
+    android:textSize="@dimen/neo_button_text_size" />
 
 </dev.trindadedev.neobrutalism.NeoView>
