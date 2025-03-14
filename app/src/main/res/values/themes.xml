@@ -3,6 +3,8 @@
   <style name="Base.Theme.Blockode" parent="Theme.Material3.Light.NoActionBar" />
 
   <style name="Theme.Blockode" parent="Base.Theme.Blockode">
+    <item name="android:windowLightStatusBar">true</item>
+    <item name="android:windowLightNavigationBar">true</item>
     <item name="android:navigationBarColor">@android:color/transparent</item>
     <item name="android:statusBarColor">@android:color/transparent</item>
     <item name="android:fontFamily">@font/neubrutalism_font_1_regular</item>
