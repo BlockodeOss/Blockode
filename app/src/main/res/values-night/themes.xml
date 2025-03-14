@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <style name="Base.Theme.Blockode" parent="Theme.MaterialComponents.Dark.NoActionBar" />
+  <!-- <style name="Base.Theme.Blockode" parent="Theme.MaterialComponents.Dark.NoActionBar" /> -->
 </resources>
