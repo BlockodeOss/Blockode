@@ -109,6 +109,10 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     Toast.makeText(this, message, TOAST_LENGHT).show();
   }
 
+  protected final void openActivity(final Class<? extends BaseAppCompatActivity> activity) {
+    startActivity(new Intent(this, activity));
+  }
+
   @Nullable
   protected <T extends Serializable> T getSerializable(final String key, final Class<T> clazz) {
     var extras = getIntent().getExtras();

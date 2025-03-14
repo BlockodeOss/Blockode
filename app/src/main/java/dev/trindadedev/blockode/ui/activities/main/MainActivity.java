@@ -14,12 +14,16 @@ import dev.trindadedev.blockode.ui.activities.editor.LogicEditorActivity;
 import dev.trindadedev.blockode.ui.activities.project.ProjectsAdapter;
 import dev.trindadedev.blockode.ui.activities.project.ProjectsViewModel;
 import dev.trindadedev.blockode.ui.activities.main.components.CreateProjectDialog;
+import dev.trindadedev.blockode.ui.activities.settings.SettingsActivity;
 import dev.trindadedev.blockode.ui.base.BaseAppCompatActivity;
 import dev.trindadedev.blockode.utils.StringUtil;
 import dev.trindadedev.blockode.utils.URLUtil;
 
 public class MainActivity extends BaseAppCompatActivity {
+
+  @NonNull
   private ActivityMainBinding binding;
+
   private ProjectsViewModel projectsViewModel;
   private ProjectsAdapter projectsAdapter;
 
@@ -45,6 +49,7 @@ public class MainActivity extends BaseAppCompatActivity {
           cpd.setOnDismissListener(dialog -> projectsViewModel.fetch());
         });
     binding.telegram.setOnClickListener(v -> URLUtil.openUrl(this, StringUtil.getString(R.string.link_telegram)));
+    binding.settings.setOnClickListener(v -> openActivity(SettingsActivity.class));
   }
 
   private void openProject(final ProjectBean project) {
