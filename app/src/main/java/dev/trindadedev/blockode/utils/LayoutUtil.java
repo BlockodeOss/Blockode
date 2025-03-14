@@ -1,6 +1,10 @@
 package dev.trindadedev.blockode.utils;
 
-/** Decompiled from Sketchware 1.1.13 */
+/**
+ * Originally Decompiled from Sketchware 1.1.13
+ * Refactored by Aquiles Trindade (trindadedev)
+ */
+
 import android.content.Context;
 import android.util.TypedValue;
 import android.view.LayoutInflater;

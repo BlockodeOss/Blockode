@@ -1,5 +1,10 @@
 package dev.trindadedev.blockode.ui.activities.editor.components;
 
+/**
+ * Originally Decompiled from Sketchware 1.1.13
+ * Refactored by Aquiles Trindade (trindadedev)
+ */
+
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -136,7 +141,7 @@ public class LogicEditorScrollView extends FrameLayout {
     return true;
   }
 
-  public void setScrollEnabled(boolean z) {
-    this.isScrollEnabled = z;
+  public void setScrollEnabled(final boolean isScrollEnabled) {
+    this.isScrollEnabled = isScrollEnabled;
   }
 }

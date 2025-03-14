@@ -1,6 +1,10 @@
 package dev.trindadedev.blockode.ui.components.editor.block;
 
-/** Decompiled from Sketchware 1.1.13 */
+/**
+ * Originally Decompiled from Sketchware 1.1.13
+ * Refactored by Aquiles Trindade (trindadedev)
+ */
+
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Context;

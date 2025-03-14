@@ -60,15 +60,6 @@
           android:layout_height="match_parent" />
       </LinearLayout>
     </LinearLayout>
-
-    <dev.trindadedev.blockode.ui.components.editor.logic.LogicTopMenu
-      android:id="@+id/top_menu"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentStart="true"
-      android:layout_alignParentTop="true"
-      android:translationY="-48dp" />
-
     <dev.trindadedev.blockode.ui.components.editor.view.ViewDummy
       android:id="@+id/dummy"
       android:layout_width="match_parent"

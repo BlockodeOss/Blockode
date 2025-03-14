@@ -1,5 +1,5 @@
 package dev.trindadedev.blockode.utils.function;
 
-public interface NListener {
+public interface SingleListener {
   void call();
 }

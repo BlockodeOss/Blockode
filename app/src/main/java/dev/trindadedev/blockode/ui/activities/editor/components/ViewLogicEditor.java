@@ -1,5 +1,10 @@
 package dev.trindadedev.blockode.ui.activities.editor.components;
 
+/**
+ * Originally Decompiled from Sketchware 1.1.13
+ * Refactored by Aquiles Trindade (trindadedev)
+ */
+
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout.LayoutParams;

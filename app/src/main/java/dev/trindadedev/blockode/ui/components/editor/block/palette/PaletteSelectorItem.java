@@ -1,6 +1,10 @@
 package dev.trindadedev.blockode.ui.components.editor.block.palette;
 
-/** Decompiled from Sketchware 1.1.13 */
+/**
+ * Originally Decompiled from Sketchware 1.1.13
+ * Refactored by Aquiles Trindade (trindadedev)
+ */
+
 import static dev.trindadedev.blockode.utils.LayoutUtil.getDip;
 
 import android.content.Context;

@@ -5,7 +5,7 @@ import android.text.Spanned;
 import com.google.android.material.textfield.TextInputLayout;
 import dev.trindadedev.blockode.R;
 import dev.trindadedev.blockode.base.BaseInputValidator;
-import dev.trindadedev.blockode.utils.function.NListener;
+import dev.trindadedev.blockode.utils.function.SingleListener;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
@@ -15,7 +15,7 @@ public class VariableNameValidator extends BaseInputValidator {
   private String[] keywords;
   Pattern ps = Pattern.compile("^[a-zA-Z][a-zA-Z0-9_]*");
   private String[] usedwords;
-  private NListener onTextChanged;
+  private SingleListener onTextChanged;
 
   public VariableNameValidator(
       Context context,
@@ -113,11 +113,11 @@ public class VariableNameValidator extends BaseInputValidator {
     usedwords = strArr;
   }
 
-  public NListener getOnTextChanged() {
+  public SingleListener getOnTextChanged() {
     return this.onTextChanged;
   }
 
-  public void setOnTextChanged(final NListener onTextChanged) {
+  public void setOnTextChanged(final SingleListener onTextChanged) {
     this.onTextChanged = onTextChanged;
   }
 }
