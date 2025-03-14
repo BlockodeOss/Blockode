@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <style name="Base.Theme.Blockode" parent="Theme.MaterialComponents.Light.NoActionBar" />
+  <style name="Base.Theme.Blockode" parent="Theme.Material3.Light.NoActionBar" />
 
   <style name="Theme.Blockode" parent="Base.Theme.Blockode">
     <item name="android:navigationBarColor">@android:color/transparent</item>
@@ -12,15 +12,5 @@
     <item name="fontFamily">@font/neubrutalism_font_1_regular</item>
     <item name="textInputStyle">@style/Widget.Blockode.TextInputLayout</item>
     <item name="materialCardViewFilledStyle">@style/Widget.Blockode.MaterialCardView.Filled</item>
-
-    <!-- Colors -->
-    <item name="colorPrimary">@color/neo_primary</item>
-    <item name="colorSecondary">@color/neo_secondary</item>
-    <item name="colorTertiary">@color/neo_tertiary</item>
-    <item name="android:colorBackground">@color/neo_background</item>
-    <item name="colorSurface">@color/neo_surface</item>
-    <item name="colorSurfaceContainerLowest">@color/neo_background</item>
-    <item name="colorSurfaceContainerLow">@color/neo_background</item>
-    <item name="colorOnPrimary">@color/neo_scrim</item>
   </style>
 </resources>

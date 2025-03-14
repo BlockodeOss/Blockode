@@ -18,9 +18,9 @@
     app:backgroundMarginStart="3dp"
     app:backgroundMarginTop="3dp"
     app:backgroundRadius="15dp"
-    app:backgroundShadowColor="@color/neo_scrim"
+    app:backgroundShadowColor="@color/mtrl_scrim_color"
     app:foregroundColor="?android:colorBackground"
-    app:foregroundStrokeColor="@color/neo_scrim"
+    app:foregroundStrokeColor="@color/mtrl_scrim_color"
     app:foregroundStrokeWidth="@dimen/neo_stroke_width">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,7 +52,7 @@
         android:paddingBottom="10dp"
         android:text="project class"
         android:textSize="15sp"
-        android:textColor="@color/neo_onPrimary"
+        android:textColor="?colorOnPrimary"
         app:layout_constraintTop_toBottomOf="@id/name"
         tools:ignore="RtlSymmetry" />
     </androidx.constraintlayout.widget.ConstraintLayout>

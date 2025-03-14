@@ -5,12 +5,4 @@
   <color name="scolor_red_02">#ffff7c79</color>
   <color name="scolor_green_violet">#ff8a55d7</color>
   <color name="scolor_blue_01">#ff09a7ec</color>
-
-  <color name="neo_primary">#000000</color>
-  <color name="neo_onPrimary">#E2E2E2</color>
-  <color name="neo_secondary">#5E5E5E</color>
-  <color name="neo_tertiary">#3B3B3B</color>
-  <color name="neo_background">#F9F9F9</color>
-  <color name="neo_surface">#F9F9F9</color>
-  <color name="neo_scrim">#000000</color>
 </resources>
