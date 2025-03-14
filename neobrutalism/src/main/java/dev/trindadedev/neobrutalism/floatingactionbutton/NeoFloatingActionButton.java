@@ -51,11 +51,13 @@ public class NeoFloatingActionButton extends BaseNeoRelativeLayout {
   }
 
   @Override
+  @NonNull
   public String getNeoName() {
     return "NeoFloatingActionButton";
   }
 
   @Override
+  @NonNull
   public View getNeoRoot() {
     return binding.fabRoot;
   }
