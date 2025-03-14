@@ -20,10 +20,6 @@ public class CreateProjectDialog extends BottomSheetDialog {
     super(context);
     binding = DialogCreateProjectBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
-
-    binding.next.asTextView().setPadding(0, 0, 0, 0);
-    binding.cancel.asTextView().setPadding(0, 0, 0, 0);
-
     binding.next.setOnClickListener(v -> onNext());
     binding.cancel.setOnClickListener(v -> dismiss());
   }

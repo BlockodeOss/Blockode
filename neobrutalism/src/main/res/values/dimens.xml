@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <dimen name="neo_stroke_width">0.5dp</dimen>
-  <dimen name="neo_background_radius">15dp</dimen>
-</resources>

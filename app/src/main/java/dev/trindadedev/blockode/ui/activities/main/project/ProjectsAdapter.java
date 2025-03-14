@@ -34,7 +34,7 @@ public class ProjectsAdapter extends ListAdapter<File, ProjectsAdapter.ProjectsA
     assert project != null;
     holder.binding.name.setText(project.basicInfo.name);
     holder.binding.dec.setText(project.basicInfo.mainClassPackage);
-    holder.binding.neoView.setOnClickListener(
+    holder.binding.card.setOnClickListener(
         v -> {
           if (onProjectClickListener != null) onProjectClickListener.call(project);
         });

@@ -39,12 +39,13 @@
       android:layout_height="wrap_content"
       android:orientation="vertical">
 
-      <dev.trindadedev.neobrutalism.floatingactionbutton.NeoFloatingActionButton
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_toggle_palette"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/action_button_margin"
-        android:src="@drawable/block_flled_white" />
+        android:src="@drawable/block_flled_white"
+        tools:ignore="ContentDescription" />
 
       <LinearLayout
         android:id="@+id/area_palette"

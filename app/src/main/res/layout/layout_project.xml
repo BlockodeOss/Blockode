@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="wrap_content"
+  android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:paddingTop="8dp"
-  android:paddingBottom="8dp"
-  android:paddingStart="20dp"
-  android:paddingEnd="20dp">
+  style="?materialCardViewFilledStyle">
 
-  <dev.trindadedev.neobrutalism.NeoView
+  <com.google.android.material.card.MaterialCardView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="5dp"
-    android:gravity="start"
-    android:orientation="vertical"
-    android:id="@+id/neo_view"
-    app:backgroundMarginStart="@dimen/neo_extended_fab_background_margin_start"
-    app:backgroundMarginTop="@dimen/neo_extended_fab_background_margin_top"
-    app:backgroundRadius="@dimen/neo_background_radius"
-    app:foregroundStrokeWidth="@dimen/neo_stroke_width"
-    app:backgroundShadowColor="@color/mtrl_scrim_color"
-    app:foregroundColor="?android:colorBackground"
-    app:foregroundStrokeColor="@color/mtrl_scrim_color">
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/card"
+    style="?materialCardViewFilledStyle">
 
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
@@ -35,10 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:fontFamily="@font/neubrutalism_font_1_bold"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:text="project name"
+        android:text="Name"
         android:textColor="?colorOnSurface"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,15 +38,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:fontFamily="@font/neubrutalism_font_1_regular"
         android:paddingStart="20dp"
         android:paddingBottom="10dp"
-        android:text="project class"
+        android:text="Class"
         android:textColor="?colorOnSurfaceVariant"
         android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@id/name"
         tools:ignore="RtlSymmetry" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-  </dev.trindadedev.neobrutalism.NeoView>
+  </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

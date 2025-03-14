@@ -40,14 +40,12 @@ public class MainActivity extends BaseAppCompatActivity {
     projectsViewModel.fetch();
     projectsViewModel.getProjects().observe(this, projectsAdapter::submitList);
     binding.list.setAdapter(projectsAdapter);
-    binding.btnCreate.setOnClickListener(
+    binding.createNew.setOnClickListener(
         v -> {
           final var cpd = new CreateProjectDialog(this);
           cpd.show();
           cpd.setOnDismissListener(dialog -> projectsViewModel.fetch());
         });
-    binding.telegram.setOnClickListener(v -> URLUtil.openUrl(this, Links.TELEGRAM));
-    binding.settings.setOnClickListener(v -> openActivity(SettingsActivity.class));
   }
 
   private void openProject(final ProjectBean project) {

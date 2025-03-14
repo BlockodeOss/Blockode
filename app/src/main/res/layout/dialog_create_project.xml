@@ -97,7 +97,7 @@
     android:layout_marginStart="24dp"
     android:layout_marginVertical="8dp">
 
-    <dev.trindadedev.neobrutalism.button.NeoButton
+    <Button
       android:id="@+id/cancel"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
       android:layout_marginEnd="50dp"
       android:text="@string/common_word_cancel" />
 
-    <dev.trindadedev.neobrutalism.button.NeoButton
+    <Button
       android:id="@+id/next"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
