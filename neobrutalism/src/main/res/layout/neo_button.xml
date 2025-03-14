@@ -6,6 +6,7 @@
   android:gravity="center"
   android:id="@+id/button_root"
   android:minHeight="@dimen/neo_button_min_height"
+  android:minWidth="@dimen/neo_button_min_width"
   android:paddingStart="@dimen/neo_button_padding_start"
   android:paddingTop="@dimen/neo_button_padding_top"
   android:paddingEnd="@dimen/neo_button_padding_end"

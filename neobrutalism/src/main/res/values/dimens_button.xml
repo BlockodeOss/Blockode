@@ -10,4 +10,5 @@
   <dimen name="neo_button_padding_start">16dp</dimen>
   <dimen name="neo_button_padding_top">14dp</dimen>
   <dimen name="neo_button_min_height">56dp</dimen>
+  <dimen name="neo_button_min_width">112dp</dimen>
 </resources>
