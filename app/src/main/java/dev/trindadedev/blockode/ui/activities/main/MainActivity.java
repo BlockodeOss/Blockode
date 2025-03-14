@@ -6,7 +6,6 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
-import dev.trindadedev.blockode.R;
 import dev.trindadedev.blockode.beans.ProjectBean;
 import dev.trindadedev.blockode.content.Links;
 import dev.trindadedev.blockode.databinding.ActivityMainBinding;
@@ -21,8 +20,7 @@ import dev.trindadedev.blockode.utils.URLUtil;
 
 public class MainActivity extends BaseAppCompatActivity {
 
-  @NonNull
-  private ActivityMainBinding binding;
+  @NonNull private ActivityMainBinding binding;
 
   private ProjectsViewModel projectsViewModel;
   private ProjectsAdapter projectsAdapter;

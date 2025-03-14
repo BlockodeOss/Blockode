@@ -47,9 +47,7 @@ public class NeoButton extends BaseNeoRelativeLayout implements IText {
     return binding.buttonText.getText();
   }
 
-  /**
-   * Returns the textview of the button.
-   */
+  /** Returns the textview of the button. */
   @Override
   @NonNull
   public TextView asTextView() {

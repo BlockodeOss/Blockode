@@ -169,7 +169,8 @@ public class LogicEditorActivity extends BaseAppCompatActivity
 
   private final void save() {
     var blocksJson = GsonUtil.getGson().toJson(binding.editor.getBlockPane().getBlocks());
-    FileUtil.writeText(ProjectManager.getBlocksFile(projectManager.getScId()).getAbsolutePath(), blocksJson);
+    FileUtil.writeText(
+        ProjectManager.getBlocksFile(projectManager.getScId()).getAbsolutePath(), blocksJson);
     paletteBlocksManager.getPaletteButtonClickListener().getVariablesManager().saveVariables();
   }
 

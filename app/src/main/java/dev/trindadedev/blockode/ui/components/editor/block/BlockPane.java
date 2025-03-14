@@ -604,12 +604,19 @@ public class BlockPane extends RelativeLayout {
     this.nearestTarget = null;
     if (blockBeans == null || blockBeans.isEmpty()) return;
     for (BlockBean bean : blockBeans) {
-      Block block = new Block(getContext(), INSERT_NORMAL, BlockUtil.getSpecString(bean.opCode, bean.type), bean.type, bean.opCode, new Object[0]);
+      Block block =
+          new Block(
+              getContext(),
+              INSERT_NORMAL,
+              BlockUtil.getSpecString(bean.opCode, bean.type),
+              bean.type,
+              bean.opCode,
+              new Object[0]);
       block.setScId(getScId());
       block.pane = this;
       addView(block);
     }
-    calculateWidthHeight(); 
+    calculateWidthHeight();
   }
 
   public void removeRelation(Block block) {

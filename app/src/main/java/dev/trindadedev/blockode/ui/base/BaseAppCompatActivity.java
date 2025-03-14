@@ -62,7 +62,8 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
   protected abstract void onBindLayout(@Nullable final Bundle savedInstanceState);
 
   protected void onPostBind(@Nullable final Bundle savedInstanceState) {
-    if (storagePermissionManager.check() == PermissionStatus.DENIED) storagePermissionManager.request();
+    if (storagePermissionManager.check() == PermissionStatus.DENIED)
+      storagePermissionManager.request();
     EdgeToEdge.enable(this);
   }
 

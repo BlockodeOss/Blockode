@@ -10,9 +10,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.google.android.material.card.MaterialCardView;
 import dev.trindadedev.blockode.databinding.LayoutPaletteBlockBinding;
-import dev.trindadedev.blockode.utils.LayoutUtil;
 import dev.trindadedev.blockode.ui.components.editor.block.Block;
 import dev.trindadedev.blockode.ui.components.editor.block.BlockBase;
+import dev.trindadedev.blockode.utils.LayoutUtil;
 
 public class PaletteBlock extends LinearLayout {
 

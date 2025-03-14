@@ -34,12 +34,12 @@ public class PermissionManager {
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
         statusBool = Environment.isExternalStorageManager();
       } else {
-        statusBool = ContextCompat.checkSelfPermission(
-                    activity, Manifest.permission.READ_EXTERNAL_STORAGE)
-                == PackageManager.PERMISSION_GRANTED
-            && ContextCompat.checkSelfPermission(
-                    activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                == PackageManager.PERMISSION_GRANTED;
+        statusBool =
+            ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(
+                        activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED;
       }
       return (statusBool) ? PermissionStatus.GRANTED : PermissionStatus.DENIED;
     }

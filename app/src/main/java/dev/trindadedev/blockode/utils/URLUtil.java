@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 
 public class URLUtil {
-  URLUtil() { }
+  URLUtil() {}
 
   public static void openUrl(final Activity activity, final String url) {
     final var intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));

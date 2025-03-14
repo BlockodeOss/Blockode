@@ -5,9 +5,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import dev.trindadedev.blockode.R;
+import dev.trindadedev.blockode.ui.components.editor.block.OnBlockCategorySelectListener;
 import dev.trindadedev.blockode.utils.BlockUtil;
 import dev.trindadedev.blockode.utils.LayoutUtil;
-import dev.trindadedev.blockode.ui.components.editor.block.OnBlockCategorySelectListener;
 import java.util.ArrayList;
 import java.util.List;
 

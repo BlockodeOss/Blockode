@@ -32,16 +32,16 @@ public class CreateProjectDialog extends BottomSheetDialog {
     var project = new ProjectBean();
     var basicInfo = new ProjectBasicInfoBean();
     basicInfo.name = Objects.requireNonNull(binding.projectName.getText()).toString();
-    basicInfo.packageName =
-      Objects.requireNonNull(binding.projectPackage.getText()).toString();
+    basicInfo.packageName = Objects.requireNonNull(binding.projectPackage.getText()).toString();
     basicInfo.mainClassPackage =
-      basicInfo.packageName + "." + Objects.requireNonNull(binding.projectClass.getText());
+        basicInfo.packageName + "." + Objects.requireNonNull(binding.projectClass.getText());
     project.scId = String.valueOf(UUID.randomUUID()); // random scid for now
     project.basicInfo = basicInfo;
     project.variables = new ArrayList<>();
     project.blocks = new ArrayList<>();
 
-    if (!((binding.projectName.getText()).toString().isEmpty() || (binding.projectPackage.getText()).toString().isEmpty())) {
+    if (!((binding.projectName.getText()).toString().isEmpty()
+        || (binding.projectPackage.getText()).toString().isEmpty())) {
       ProjectManager.createProjectByBean(project);
       dismiss();
     } else {
