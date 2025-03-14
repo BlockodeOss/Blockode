@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
 import dev.trindadedev.blockode.R;
 import dev.trindadedev.blockode.beans.ProjectBean;
+import dev.trindadedev.blockode.content.Links;
 import dev.trindadedev.blockode.databinding.ActivityMainBinding;
 import dev.trindadedev.blockode.ui.activities.editor.EditorState;
 import dev.trindadedev.blockode.ui.activities.editor.LogicEditorActivity;
@@ -16,7 +17,6 @@ import dev.trindadedev.blockode.ui.activities.main.project.ProjectsAdapter;
 import dev.trindadedev.blockode.ui.activities.main.project.ProjectsViewModel;
 import dev.trindadedev.blockode.ui.activities.settings.SettingsActivity;
 import dev.trindadedev.blockode.ui.base.BaseAppCompatActivity;
-import dev.trindadedev.blockode.utils.StringUtil;
 import dev.trindadedev.blockode.utils.URLUtil;
 
 public class MainActivity extends BaseAppCompatActivity {
@@ -48,7 +48,7 @@ public class MainActivity extends BaseAppCompatActivity {
           cpd.show();
           cpd.setOnDismissListener(dialog -> projectsViewModel.fetch());
         });
-    binding.telegram.setOnClickListener(v -> URLUtil.openUrl(this, StringUtil.getString(R.string.link_telegram)));
+    binding.telegram.setOnClickListener(v -> URLUtil.openUrl(this, Links.TELEGRAM));
     binding.settings.setOnClickListener(v -> openActivity(SettingsActivity.class));
   }
 

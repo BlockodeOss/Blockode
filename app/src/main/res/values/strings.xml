@@ -125,10 +125,4 @@
   <!-- Toast -->
   <string name="fill_all_fields">Please fill in all fields</string>
   <string name="common_word_projects">Projects</string>
-  
-  <!-- Links -->
-  <string
-    name="link_telegram"
-    translatable="false">https://t.me/blockodeapp</string>
-
 </resources>
