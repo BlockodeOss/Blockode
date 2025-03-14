@@ -30,8 +30,8 @@ public class ProjectBean extends BaseBean implements Parcelable {
   public ProjectBean(final Parcel parcel) {
     this.scId = parcel.readString();
     this.basicInfo = ParcelUtil.readParcelable(parcel, ProjectBasicInfoBean.class);
-    this.variables = (ArrayList<VariableBean>) ParcelUtil.readSerializable(parcel, ArrayList.class);
-    this.blocks = (ArrayList<BlockBean>) ParcelUtil.readSerializable(parcel, ArrayList.class);
+    parcel.readTypedList(variables, VariableBean.CREATOR);
+    parcel.readTypedList(blocks, BlockBean.CREATOR);
   }
 
   public void copy(final ProjectBean other) {
